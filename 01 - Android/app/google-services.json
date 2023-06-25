@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1070970526187",
+    "project_id": "a-mov-com-mapc-83cef",
+    "storage_bucket": "a-mov-com-mapc-83cef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070970526187:android:da3ae28b45a588155421ae",
+        "android_client_info": {
+          "package_name": "com.example.movilescomp2023a"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070970526187-v7onls81ipof448s6pko48vod81ni6qp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8gnN1-zdMmTgomQvniCN7yFg26ytjrFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070970526187-v7onls81ipof448s6pko48vod81ni6qp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

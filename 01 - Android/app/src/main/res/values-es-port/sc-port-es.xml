@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bienvenida">Bienvenida ES</string>
+    <color name="color_bienvenida">#673AB7</color>
+    <color name="color_fondo">#FF0707</color>
+
+</resources>
