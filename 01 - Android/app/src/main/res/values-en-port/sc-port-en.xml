@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< 2677196d2dd58da434283cfe8f179b267619916b
     <string name="bienvenida">Bienvenida EN</string>
     <color name="color_bienvenida">#03A9F4</color>
     <color name="color_fondo">#E91E63</color>
 
 
 
+=======
+>>>>>>> Qualifiers
 </resources>
