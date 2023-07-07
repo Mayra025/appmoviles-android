@@ -1,0 +1,148 @@
+Contval nombre: String,
+    val esHemisferioNorte: Boolean,
+    val fechaPrimeraCiv: Date,
+    val cantidadPaises: Int,
+    var area: Double
+
+Pais val nombre: String,
+    val esCapital: Boolean,
+    val fechaIndependencia: Date,
+    var poblacion: Int,
+    val idh: Double (indice desarrollo humano)
+
+África, 
+false,   
+01 01 3100 a.C - primera civilización (egipcia)
+54 países,
+30.272.922 kilómetros cuadrados 
+	Camerún
+	No
+	1 oct 1961
+	26097000
+	0,576
+
+	Egipto /República árabe de Egipto
+	No (El cairo)
+	11 feb 2011
+	112 716 600
+	0,731
+	
+	Tanzania|False|26 abril 1964|67 438 110|0,549
+	Angola|False|25 agosto 1992|36 684 212|0,586
+	Ghana|False|1 juli 1960|31 486 000|0,632
+	Marruecos|False|16 jul 2011|37 840 052|0,683
+	Sudáfrica|False|17 marzo 1992|60 414 496|0,713
+	
+	
+América, 
+false
+01 01 5.000 años -caral
+35 países,
+42.500.000 kilómetros cuadrados
+	Argentina
+	No-BA
+	9 jul 1859
+	46 044 703
+	0,842
+	
+	Brasil
+	No-Brasilia
+	29 ag 1825
+	218 689 757
+	0,754
+	
+	Ecuador
+	No
+	10 ag 1809
+	18 408 350
+	0,740
+
+	Colombia|False|30 en 1881|52 215 503|0,752
+	Cuba|False|1 en 1959|10,985,974|0,764
+	Estados Unidos|False|3 sep 1783|339 665 118|0,921
+	México|True|28 dic 1836|129 875 529|0,758
+	Puerto Rico|False|25 jul 1952|3 335 784|0,850
+	
+
+Asia,
+false 
+01 01 3500 años (valle indo)
+51 países
+44.541.138 km2.
+	Afganistán
+	No - Kabul
+	19 agosto 1919
+	42 239 856
+	0,478
+
+	
+	Catar
+	No- Doha
+	3 sep 1971
+	2 641 669
+	0,855
+	
+	Corea del Sur
+	No - seúl
+	16 dic 1987
+	51 966 948
+	0,925
+
+	Irak|False|28 jun 2004|45 504 564|0,686
+	Japón|False|3 may 1947|123 719 238|0,925
+	Rusia|False|25 dic 1993|142 856 536|0,822
+	Turquía|False|29 oct 1923|85 816 190|0,838
+	China|False|1 oct 1949|1 425 671 300|0,768
+	
+
+Europa
+true,
+01 012000 a.C. (minoica)
+50 países y otros Estados como Mónaco o el Vaticano
+10.530.751 kilómetros cuadrados
+	Alemania
+	No-berlin
+	3 oct 1990
+	84 270 625
+	0,942
+	
+	Andorra
+	No
+	8 sep 1278
+	81 588
+	0,858
+
+	Dinamarca|False|14 en 1814|5 837 213|0,948
+	España|False|14 abril 1931|48 196 693|0,905
+	Grecia|False|24 jul 1974|10 432 481|0,887
+	Italia|False|2 jul 1946|58 870 764|0,895
+	Noruega|False|26 octu 1905|5 488 984|0,961
+	Vaticano|True|11 feb 1929|618|0,873
+
+Oceanía
+false
+50 000 años
+15 paises
+8.700.000 km2 
+	Australia
+	No-Canberra
+	3 marzo 1986
+	26 020 805
+	0,951
+
+	Papúa Nueva Guinea
+	No
+	16 sep 1975
+	8 935 000
+	0,558
+
+	Fiyi
+	No
+	6 oct 1987
+	935 974
+	0,730
+
+	Micronesia|False|22 dic 1990|111 000|0,628
+	Tonga|False|4 jun 1970|100 651|0,745
+	Nueva Zelanda|False|25 nov 1947|5 006 020|0,937
+	Vanuatu|False|30 jul 1980|266 937|0,607

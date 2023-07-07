@@ -7,7 +7,7 @@ class Pais(
     val esCapital: Boolean,
     val fechaIndependencia: Date,
     var poblacion: Int,
-    val productoInternoBruto: Double
+    val indiceDH: Double
 ){
     companion object {  //para no crear instancia
         private val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
@@ -20,7 +20,7 @@ class Pais(
                     writer.write("${pais.esCapital}|")
                     writer.write("${dateFormat.format(pais.fechaIndependencia)}|")
                     writer.write("${pais.poblacion}|")
-                    writer.write("${pais.productoInternoBruto}\n")
+                    writer.write("${pais.indiceDH}\n")
 
                 }
             }
@@ -38,7 +38,7 @@ class Pais(
                         val esCapital = campos[1].toBoolean()
                         val fechaIndependencia = dateFormat.parse(campos[2])
                         val poblacion = campos[3].toInt()
-                        val PIB = campos[4].toDouble()
+                        val idh = campos[4].toDouble()
 
 
                         val pais = Pais(
@@ -46,7 +46,7 @@ class Pais(
                             esCapital,
                             fechaIndependencia,
                             poblacion,
-                            PIB
+                            idh
                         )
                         paises.add(pais)
                     }
@@ -67,7 +67,7 @@ class Pais(
                 println("  Es Capital: ${pais.esCapital}")
                 println("  Fecha de Independencia: ${dateFormat.format(pais.fechaIndependencia)}")
                 println("  Población: ${pais.poblacion}")
-                println("  PIB: ${pais.productoInternoBruto}")
+                println("  IDH: ${pais.indiceDH}")
             }
         }
     }
@@ -86,14 +86,14 @@ class Pais(
 
         println("Ingrese la población:")
         val poblacionInput = readLine() ?: ""
-        val poblacionPaises = poblacionInput.toIntOrNull()
+        val poblacion = poblacionInput.toIntOrNull()
 
-        println("Ingrese el PIB:")
-        val PIBInput = readLine() ?: ""
-        val PIB = PIBInput.toDoubleOrNull()
+        println("Ingrese el IDH:")
+        val IDHInput = readLine() ?: ""
+        val IDH = IDHInput.toDoubleOrNull()
 
-        if (nombre.isNotEmpty() && poblacion != null && PIB != null && fechaIndependencia != null) {
-            val pais = Pais(nombre, esCapital, fechaIndependencia, poblacion, PIB)
+        if (nombre.isNotEmpty() && poblacion != null && IDH != null && fechaIndependencia != null) {
+            val pais = Pais(nombre, esCapital, fechaIndependencia, poblacion, IDH)
             paises.add(pais)
             println("País agregado correctamente.")
         } else {

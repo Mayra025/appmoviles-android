@@ -5,7 +5,7 @@ import java.util.*
 class Continente(
     val nombre: String,
     val esHemisferioNorte: Boolean,
-    val fechaFundacion: Date,
+    val fechaCivilizacion: Date,
     val cantidadPaises: Int,
     var area: Double
 ){
@@ -14,11 +14,11 @@ class Continente(
 
         fun guardarContinentes(continentes: List<Continente>, archivo: String) {
             val file = File(archivo)
-            file.bufferedWriter().use { writer ->
+            file.bufferedWriter().use { writer -> //use() se utiliza para asegurarse de que los recursos sean cerrados correctamente después de su uso.
                 continentes.forEach { continente ->
                     writer.write("${continente.nombre}|")
                     writer.write("${continente.esHemisferioNorte}|")
-                    writer.write("${dateFormat.format(continente.fechaFundacion)}|")
+                    writer.write("${dateFormat.format(continente.fechaCivilizacion)}|")
                     writer.write("${continente.cantidadPaises}|")
                     writer.write("${continente.area}\n")
 
@@ -33,18 +33,18 @@ class Continente(
             if (file.exists()) {
                 file.bufferedReader().use { reader ->
                     reader.lines().forEach { line ->
-                        val campos = line.split("|")
+                        val campos = line.split("|") //dividiendo una cadena de texto (line) en partes más pequeñas utilizando el carácter | como separador.
                         if (campos.size == 5) {
                             val nombre = campos[0]
                             val esHemisferioNorte = campos[1].toBoolean()
-                            val fechaFundacion = dateFormat.parse(campos[2])
+                            val fechaCivilizacion = dateFormat.parse(campos[2])
                             val cantidadPaises = campos[3].toInt()
                             val area = campos[4].toDouble()
 
                             val continente = Continente(
                                 nombre,
                                 esHemisferioNorte,
-                                fechaFundacion,
+                                fechaCivilizacion,
                                 cantidadPaises,
                                 area
                             )
@@ -62,13 +62,13 @@ class Continente(
 
     fun leerContinentes(continentes: List<Continente>) {
         if (continentes.isEmpty()) {
-            println("No hay continetes registrados")
+            println("No hay continentes registrados")
         } else {
             println("Continentes registrados:")
             continentes.forEach { continente: Continente ->
                 println("- ${continente.nombre}")
                 println("  Es Hemisferio Norte: ${continente.esHemisferioNorte}")
-                println("  Fecha de Fundación: ${dateFormat.format(continente.fechaFundacion)}")
+                println("  Fecha de Fundación: ${dateFormat.format(continente.fechaCivilizacion)}")
                 println("  Cantidad de Países: ${continente.cantidadPaises}")
                 println("  Área: ${continente.area}")
             }
@@ -77,13 +77,13 @@ class Continente(
 
     fun ingresarContinente(continentes: MutableList<Continente>) {
         println("Ingrese el nombre del continente:")
-        val nombre = readLine() ?: ""
+        val nombre = readLine() ?: "" //lee la linea ingresada por el usuario o  asigna una cadena vacía si no se ingresó ningún valor
 
         println("¿Es Hemisferio Norte? (true/false):")
         val esHemisferioNorteInput = readLine() ?: ""
         val esHemisferioNorte = esHemisferioNorteInput.toBoolean()
 
-        println("Ingrese la fecha de fundación (dd/MM/yyyy):")
+        println("Ingrese la fecha de civilización (dd/MM/yyyy)a.C:")
         val fechaFundacionInput = readLine() ?: ""
         val fechaFundacion = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).parse(fechaFundacionInput)
 
@@ -112,7 +112,7 @@ class Continente(
         println("Ingrese el nombre del continente a actualizar :")
         val nombre = readLine() ?: ""
 
-        val continente = continentes.find { it.nombre.equals(nombre, ignoreCase = true) }
+        val continente = continentes.find { it.nombre.equals(nombre, ignoreCase = true) } // busca en la lista continentes un objeto que tenga un nombre igual al valor almacenado en la variable nombre, ignorando las diferencias de mayúsculas y minúsculas
         if (continente != null) {
             println("Ingrese la nueva área del continente:")
             val aInput = readLine() ?: ""
