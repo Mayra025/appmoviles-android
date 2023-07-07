@@ -71,7 +71,8 @@ class AACicloVida : AppCompatActivity() {
 
     //estas funciones solo guardan Primitivas, ejm: no Usuario(creado por el programador)
     override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
-        outState.run{
+    //override fun onSaveInstanceState(outState: Bundle) {
+            outState.run{
             //GUARDA VARIABLES (PRIMITIVAS por ahora)
             putString("textoGuardado",textoGlobal)
             //putInt("numerogUardado",numero)
@@ -98,4 +99,5 @@ class AACicloVida : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
+
 }
