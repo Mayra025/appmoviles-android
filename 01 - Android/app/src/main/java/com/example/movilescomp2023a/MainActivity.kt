@@ -6,7 +6,6 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract
-import android.provider.ContactsContract.Contacts
 import android.widget.Button
 import androidx.activity.result.contract.ActivityResultContracts
 
@@ -92,6 +91,12 @@ class MainActivity : AppCompatActivity() {  //viene de AppCompatActivity
         val botonRView=findViewById<Button>(R.id.btn_revcycler_view)
         botonRView.setOnClickListener {
             irActividad(FRecyclerView::class.java)
+        }
+
+        //
+        val botonGoogleMaps=findViewById<Button>(R.id.btn_google_maps)
+        botonGoogleMaps.setOnClickListener {
+            irActividad(GGoogleMapsActivity::class.java)
         }
     }
 
