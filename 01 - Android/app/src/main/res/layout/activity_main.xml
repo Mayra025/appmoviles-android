@@ -96,4 +96,15 @@
         app:layout_constraintTop_toTopOf="@+id/btn_ir_intent_implicito"
         app:layout_constraintVertical_bias="0.0" />
 
+    <Button
+        android:id="@+id/btn_intent_firebase_ui"
+        android:layout_width="103dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="40dp"
+        android:text="Login F UI"
+        app:layout_constraintBottom_toTopOf="@+id/btn_google_maps"
+        app:layout_constraintEnd_toEndOf="@+id/btn_google_maps"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_google_maps" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

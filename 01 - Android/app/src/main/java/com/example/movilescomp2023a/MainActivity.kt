@@ -47,6 +47,8 @@ class MainActivity : AppCompatActivity() {  //viene de AppCompatActivity
             }
         }
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState) //hereda del padre
         setContentView(R.layout.activity_main) // R=Resource, activity_main=interfaz
@@ -97,6 +99,12 @@ class MainActivity : AppCompatActivity() {  //viene de AppCompatActivity
         val botonGoogleMaps=findViewById<Button>(R.id.btn_google_maps)
         botonGoogleMaps.setOnClickListener {
             irActividad(GGoogleMapsActivity::class.java)
+        }
+
+        //boton Firebase
+        val botonFirebaseUI=findViewById<Button>(R.id.btn_intent_firebase_ui)
+        botonFirebaseUI.setOnClickListener {
+            irActividad(HFirebaseUIAuth::class.java)
         }
     }
 
