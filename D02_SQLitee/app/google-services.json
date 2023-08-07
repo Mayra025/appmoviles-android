@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "612200531463",
+    "project_id": "a-mov-com-d2",
+    "storage_bucket": "a-mov-com-d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612200531463:android:70504342d8460bcdb4cca2",
+        "android_client_info": {
+          "package_name": "com.example.d02_sqlitee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612200531463-pffefu4mrfek5q477l8jvuq21erohagd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUTzKVj1lGi3kZ46exlzhW5gEdHr3JJOk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612200531463-pffefu4mrfek5q477l8jvuq21erohagd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mi_editar"
+        android:title="Editar" />
+    <item
+        android:id="@+id/mi_eliminar"
+        android:title="Eliminar" />
+    <item
+        android:id="@+id/mi_ver"
+        android:title="Ver países" />
+
+</menu>
