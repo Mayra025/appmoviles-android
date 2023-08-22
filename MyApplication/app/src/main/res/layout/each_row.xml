@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:cardCornerRadius="12dp"
+        >
+
+        <TextView
+            android:id="@+id/text2"
+            android:text="gn"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:padding="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            app:cardCornerRadius="12dp"
+
+            >
+
+
+
+            <ImageView
+                android:id="@+id/imageview"
+                android:src="@drawable/icon_1"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:layout_marginEnd="2dp"
+
+                />
+
+
+            <ImageView
+                android:id="@+id/imageview"
+                android:src="@drawable/icon_9"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:layout_marginEnd="2dp"
+                tools:ignore="DuplicateIds" />
+
+            <ImageView
+                android:id="@+id/imageview"
+                android:src="@drawable/icon_6"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:layout_marginEnd="2dp"
+                tools:ignore="DuplicateIds" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

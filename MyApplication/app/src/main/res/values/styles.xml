@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomTabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabIndicatorColor">@android:color/black</item> <!-- Color negro -->
+        <item name="tabIndicatorHeight">3dp</item> <!-- Grosor mayor -->
+
+    </style>
+    <style name="CustomTabText" parent="Widget.Design.TabLayout">
+        <item name="tabTextColor">@android:color/black</item> <!-- Color negro -->
+    </style>
+
+
+</resources>
