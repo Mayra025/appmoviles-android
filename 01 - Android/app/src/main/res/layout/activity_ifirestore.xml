@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IFirestore">
+
+    <Button
+        android:id="@+id/btn_fs_datos_prueba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C.DATOS"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="44dp" />
+
+    <Button
+        android:id="@+id/btn_fs_odoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O. DOC"
+        tools:layout_editor_absoluteX="291dp"
+        tools:layout_editor_absoluteY="62dp" />
+
+    <Button
+        android:id="@+id/btn_fs_ind_comp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IN. COMP"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <Button
+        android:id="@+id/btn_fs_crear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CREAR"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <Button
+        android:id="@+id/btn_fs_eliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ELIMINAR"
+        tools:layout_editor_absoluteX="273dp"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <Button
+        android:id="@+id/btn_fs_epaginar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E. PAGINAR"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="233dp" />
+
+    <Button
+        android:id="@+id/btn_fs_paginar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PAGINAR"
+        tools:layout_editor_absoluteX="173dp"
+        tools:layout_editor_absoluteY="233dp" />
+
+    <ListView
+        android:id="@+id/lv_firestore"
+        android:layout_width="228dp"
+        android:layout_height="237dp"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="437dp" />
+
+    <Button
+        android:id="@+id/btn_fs_order_by"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ORDER BY "
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="43dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
