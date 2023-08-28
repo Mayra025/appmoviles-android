@@ -18,12 +18,16 @@ public class MainActivity extends AppCompatActivity {
     NotifFragment notifFragment=new NotifFragment();
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.container, new HomeFragment())
+                    .commit();
+        }
 
         bottomNavigationView = findViewById(R.id.bottom_nav);
 
@@ -32,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
+                    //Realiza una transacción que reemplaza el contenido del contenedor con el fragmento
                     case R.id.nav_home:
                         getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
                         break;
@@ -45,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        BadgeDrawable badge = bottomNavigationView.getOrCreateBadge(R.id.nav_notif);
+        BadgeDrawable badge = bottomNavigationView.getOrCreateBadge(R.id.nav_notif); //para obtener o crear un distintivo (badge, notificacion visual) en un ítem específico
         badge.setVisible(true);
     }
 

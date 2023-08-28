@@ -20,7 +20,7 @@ public class NotifFragment extends Fragment {
     View v;
     RecyclerView recyclerView;
     RowAdapter customAdapter;
-    List<ModalClass> mList; // Cambiado a List<ModalClass>
+    List<ModalClass> mList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

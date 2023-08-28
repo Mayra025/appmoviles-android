@@ -45,6 +45,7 @@ public class RowAdapter extends RecyclerView.Adapter<RowAdapter.GridHolder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //está creando y mostrando un mensaje emergente (Toast)
                 Toast.makeText(context, modalItem.getText(), Toast.LENGTH_SHORT).show();
             }
         });

@@ -28,13 +28,13 @@ public class HomeFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState){
-        v=inflater.inflate(R.layout.fragment_home,container,false);
+        v=inflater.inflate(R.layout.fragment_home,container,false); //inflando, preparando, el diseño de un fragmento
         recyclerView=v.findViewById(R.id.rvMain);
 
         customAdapter=new CustomAdapter(mList,getContext());
-        recyclerView.setAdapter(customAdapter);
+        recyclerView.setAdapter(customAdapter); //para mostrar elementos en una lista o cuadrícula en función del diseño configurado en el adaptador.
 
-        StaggeredGridLayoutManager mLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        StaggeredGridLayoutManager mLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL); //Staggered para cuadriculas desiguales,cómo se mostrarán los elementos en forma de cuadrícula con dos columnas y orientación vertical.
         recyclerView.setLayoutManager(mLayoutManager);
         return v;
     }
@@ -53,30 +53,16 @@ public class HomeFragment extends Fragment {
         mList.add(new ModalClass(R.drawable.icon_8,"View Picture (516 x 701)"));
         mList.add(new ModalClass( R.drawable.icon_9,"❤ 63 mil"));
         mList.add(new ModalClass( R.drawable.icon_10,"Burgundy Outfits"));
-       /* setContentView(R.layout.activity_staggered_view);
+        mList.add(new ModalClass(R.drawable.icon_1, "❤ 44 mil"));
+        mList.add(new ModalClass( R.drawable.icon_2,""));
+        mList.add(new ModalClass( R.drawable.icon_3,""));
+        mList.add(new ModalClass( R.drawable.icon_4,"Akzentz Luxio - Coy"));
+        mList.add(new ModalClass(R.drawable.icon_5,"Tattos"));
+        mList.add(new ModalClass( R.drawable.icon_6,""));
+        mList.add(new ModalClass( R.drawable.icon_7,""));
+        mList.add(new ModalClass(R.drawable.icon_8,"View Picture (516 x 701)"));
+        mList.add(new ModalClass( R.drawable.icon_9,"❤ 63 mil"));
+        mList.add(new ModalClass( R.drawable.icon_10,"Burgundy Outfits"));
 
-        recyclerView = (RecyclerView) findViewById(R.id.rvMain);
-
-
-        recyclerView.setAdapter(new GridLayoutAdapter(bitmaps));
-        StaggeredGridLayoutManager mLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(mLayoutManager);*/
     }
-/*
-    private Bitmap[] setUpBitmaps() {
-        Bitmap[] bitmaps = new Bitmap[10];
-        bitmaps[0] = BitmapFactory.decodeResource(getResources(), R.drawable.icon_1);
-        bitmaps[1] = BitmapFactory.decodeResource(getResources(), R.drawable.icon_2);
-        bitmaps[2] = BitmapFactory.decodeResource(getResources(), R.drawable.icon_3);
-        bitmaps[3] = BitmapFactory.decodeResource(getResources(), R.drawable.icon_4);
-        bitmaps[4] = BitmapFactory.decodeResource(getResources(), R.drawable.icon_5);
-        bitmaps[5] = BitmapFactory.decodeResource(getResources(), R.drawable.icon_6);
-        bitmaps[6] = BitmapFactory.decodeResource(getResources(), R.drawable.icon_7);
-        bitmaps[7] = BitmapFactory.decodeResource(getResources(), R.drawable.icon_8);
-        bitmaps[8] = BitmapFactory.decodeResource(getResources(), R.drawable.icon_9);
-        bitmaps[9] = BitmapFactory.decodeResource(getResources(), R.drawable.icon_10);
-        return bitmaps;
-    }*/
-
-
 }
