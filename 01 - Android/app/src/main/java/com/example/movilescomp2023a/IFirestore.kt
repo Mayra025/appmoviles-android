@@ -6,15 +6,17 @@ import android.util.SparseBooleanArray
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
+import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.QueryDocumentSnapshot
+import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
 import kotlin.collections.ArrayList
 
 class IFirestore : AppCompatActivity() {
-    val query: Query?=null
+    var query: Query?=null
     val arreglo:ArrayList<ICities> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,6 +46,77 @@ class IFirestore : AppCompatActivity() {
         //solo se necesita el id
         val botonCrear=findViewById<Button>(R.id.btn_fs_crear)
         botonCrear.setOnClickListener { crearEjemplo() }
+
+        //boton Eiminar
+        val botonFirebaseEliminar=findViewById<Button>(R.id.btn_fs_eliminar)
+        botonFirebaseEliminar.setOnClickListener{eliminarRegistro()}
+
+        //Empezar Paginar
+        val botonFirebaseEmpezarPaginar=findViewById<Button>(R.id.btn_fs_epaginar)
+        botonFirebaseEmpezarPaginar.setOnClickListener {
+            query=null;
+            consultarCiudades(adaptador)
+        }
+
+        //Paginar
+        val botonFirebasePaginar=findViewById<Button>(R.id.btn_fs_paginar)
+        botonFirebasePaginar.setOnClickListener { consultarCiudades(adaptador) }
+    }
+
+    fun consultarCiudades(adaptador: ArrayAdapter<ICities>){
+        val db=Firebase.firestore
+        val citiesRef=db.collection("cities").orderBy("population").limit(1)
+        var tarea:Task<QuerySnapshot>? =null
+
+        if(query==null){
+            tarea=citiesRef.get()//1era vez
+            limpiarArreglo()
+            adaptador.notifyDataSetChanged()
+        }else   {
+            //consulta de la consulta anterior , empezando en el nuevo doc
+            tarea=query!!.get()
+        }
+
+        if(tarea != null){
+            tarea
+                .addOnSuccessListener {
+                    documentSnapshots -> guardarQuery(documentSnapshots,citiesRef)
+                    for (ciudad in documentSnapshots){
+                        anadirAArregloCiudad(ciudad)
+                    }
+                    adaptador.notifyDataSetChanged()
+                }
+                .addOnFailureListener {
+                    //si falla
+                }
+        }
+    }
+
+    fun guardarQuery(documentSnapshots: QuerySnapshot, refCities: Query){
+        if(documentSnapshots.size()>0){
+            val ultimoDocumento=documentSnapshots.documents[documentSnapshots.size()-1]
+
+            query=refCities
+                    //startAfter (empezar despues) permite paginar
+                .startAfter(ultimoDocumento)
+        }
+    }
+
+
+
+
+    fun eliminarRegistro(){
+        val db=Firebase.firestore
+        val referenciaEjemploEstudiante=db.collection("ejemplo")
+        referenciaEjemploEstudiante
+            .document("12345678")
+            .delete()
+            .addOnCompleteListener{
+                //si sale bien
+            }
+            .addOnFailureListener{
+                //Si sale mal
+            }
     }
 
     fun crearEjemplo(){
@@ -140,10 +213,11 @@ class IFirestore : AppCompatActivity() {
             .orderBy("population", Query.Direction.ASCENDING) //campo a ordenar, direccion
             .get()  //para hacer la llamada a
             .addOnSuccessListener { //it (esto es lo q sea q llegue)
-            for(ciudad in it){
-                ciudad.id //id quemado o autogenerado
-                anadirAArregloCiudad(ciudad)
-            }
+                for(ciudad in it){
+                    ciudad.id //id quemado o autogenerado
+                    anadirAArregloCiudad(ciudad)
+                }
+                adaptador.notifyDataSetChanged()
             }
             .addOnFailureListener{
                 //Errores

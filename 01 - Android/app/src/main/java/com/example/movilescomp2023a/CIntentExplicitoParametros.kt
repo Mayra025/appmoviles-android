@@ -13,6 +13,12 @@ class CIntentExplicitoParametros : AppCompatActivity() {
         val apellido=intent.getStringExtra("apellido")
         val edad=intent.getIntExtra("edad",0)
 
+        val entrenador=intent.getParcelableExtra<BEntrenador>("entrenador")
+        //entrenador.id
+        //entrenador.nombre
+        //entrenador. descripcion
+
+
         //para boton Intent
         val boton=findViewById<Button>(R.id.btn_devolver_respuesta)
     }
