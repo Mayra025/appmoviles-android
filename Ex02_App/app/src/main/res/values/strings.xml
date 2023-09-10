@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Continente - Países</string>
+
+    <!-- Añadir string-array del menu-->
+    <string-array name="string_array_opciones_dialogo">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miércoles</item>
+    </string-array>
+</resources>

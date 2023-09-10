@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "218615539313",
+    "project_id": "a-mov-ex02",
+    "storage_bucket": "a-mov-ex02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218615539313:android:9dd79fa89f8f9c971dddd0",
+        "android_client_info": {
+          "package_name": "com.example.ex02_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "218615539313-1k0bcdclu64f265jolo04ve90156um1p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrHCdSWZtbInI82um0uGRSG2AX2KfiQg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "218615539313-1k0bcdclu64f265jolo04ve90156um1p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
