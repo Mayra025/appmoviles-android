@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--text view for displaying the selected date-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/phaseView"
+                    android:layout_width="233dp"
+                    android:layout_height="63dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Fase Lunar"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/moonDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="61dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#F6E977"
+                    android:text="Ver Fase" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/idTVDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Fecha actual"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@color/colorTexto"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            style="@style/CalendarViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="297dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorTexto2" />
+
+        <TextView
+            android:id="@+id/ListaTerminos"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="Agregar nuevos eventos"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#E5EAB1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/eventName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Ingrese el evento"
+                android:inputType="textPersonName"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/saveEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#F6E977"
+                android:text="Guardar Evento" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="177dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/desLunaNueva"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:text="Eventos de Hoy"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <ListView
+                android:id="@+id/LunaLlena"
+                android:layout_width="match_parent"
+                android:layout_height="132dp"
+                android:background="#C0EAC1"
+                android:gravity="center" />
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/glosario"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:backgroundTint="#F6E977"
+            android:text="Glosario   🔵 "
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

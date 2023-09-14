@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "841043731943",
+    "project_id": "a-mov-com-moon",
+    "storage_bucket": "a-mov-com-moon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841043731943:android:b496a8700060cd01ad4942",
+        "android_client_info": {
+          "package_name": "com.example.calendar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK8Vl7KFy3P8dCcRK14alO_WVZnzqi6Tc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841043731943:android:fabe8b1c0030d86bad4942",
+        "android_client_info": {
+          "package_name": "com.example.moonapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK8Vl7KFy3P8dCcRK14alO_WVZnzqi6Tc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GlosarioActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/idTVDate"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Glosario"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/ListaTerminos"
+            android:layout_width="200dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="Luna Llena:"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="620dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/desLunaNueva2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="La luna llena o plenilunio​ es una fase lunar que sucede cuando nuestro planeta se encuentra situado entre el Sol y la Luna, casi alineados. "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/listaTerminos"
+                android:layout_width="200dp"
+                android:layout_height="43dp"
+                android:gravity="center"
+                android:text="Luna nueva:"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/desLunaNueva"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="La luna nueva, novilunio​ o interlunio​ es una fase lunar que sucede cuando la Luna se encuentra situada exactamente entre la Tierra y el Sol. "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                 />
+
+            <TextView
+                android:id="@+id/listaTerminos2"
+                android:layout_width="200dp"
+                android:layout_height="43dp"
+                android:gravity="center"
+                android:text="Creciente:"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/desLunaNueva3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="El periodo entre la luna nueva y la luna llena, cuando aumenta el àrea visible iluminada de la Luna. "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                 />
+
+            <TextView
+                android:id="@+id/listaTerminos3"
+                android:layout_width="200dp"
+                android:layout_height="43dp"
+                android:gravity="center"
+                android:text="Menguante: "
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/desLunaNueva4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="El período entre la luna llena y la luna nueva, cuando el área visible iluminada de la Luna disminuye. "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                 />
+
+            <TextView
+                android:id="@+id/listaTerminos7"
+                android:layout_width="200dp"
+                android:layout_height="43dp"
+                android:gravity="center"
+                android:text="Perigeo:"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/desLunaNueva5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="El punto más cercano en la órbita de la Luna alrededor de la Tierra. "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                 />
+
+            <TextView
+                android:id="@+id/listaTerminos4"
+                android:layout_width="200dp"
+                android:layout_height="43dp"
+                android:gravity="center"
+                android:text="Apogeo:"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/desLunaNueva6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="El punto más alejado en la órbita de la Luna alrededor de la Tierra. "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                 />
+
+            <TextView
+                android:id="@+id/listaTerminos5"
+                android:layout_width="200dp"
+                android:layout_height="43dp"
+                android:gravity="center"
+                android:text="Zodíaco: "
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/desLunaNueva7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Doce sectores de la longitud elíptica, que toman su nombre de doce constelaciones."
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

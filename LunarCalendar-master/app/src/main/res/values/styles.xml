@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowBackground">@color/colorFondo</item>
+        <!-- Color del texto de la actividad -->
+        <item name="android:textColor">@color/colorTexto</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="CalendarViewStyle">
+        <item name="android:textColor">@android:color/white</item>
+        <!-- Otros atributos de estilo si es necesario -->
+    </style>
+
+</resources>
