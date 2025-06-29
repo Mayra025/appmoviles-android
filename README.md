@@ -1,2 +1,1 @@
-# pachacama-cuzco-mayra-alexandra-mov-com
-Aplicaciones Móviles
+Aplicaciones Móviles 2023
